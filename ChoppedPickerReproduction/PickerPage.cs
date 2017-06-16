@@ -9,10 +9,7 @@ namespace ChoppedPickerReproduction
             var viewModel = new PickerViewModel();
             BindingContext = viewModel;
 
-            var picker = new Picker
-            {
-                HorizontalOptions = LayoutOptions.End
-            };
+            var picker = new Picker();
             picker.SetBinding(Picker.ItemsSourceProperty, nameof(viewModel.PickerNumberList));
             picker.SetBinding(Picker.SelectedIndexProperty, nameof(viewModel.SelectedNumberIndex));
 
